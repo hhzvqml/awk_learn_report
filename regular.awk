@@ -30,7 +30,8 @@
 #范围模式
 #part1,part2
 
-BEGIN{
+BEGIN{    #在BEGIN中之所以无法输出,是由于输入被读取之前执行的.
+
     print FILENAME
 }
 NR=2,NR=6 {
